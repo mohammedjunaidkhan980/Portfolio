@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: 6,
+    title: "NLP Sentiment Analysis Pipeline",
+    description: "End-to-end NLP pipeline using BERT to classify customer reviews. Pub/Sub → Dataflow → BERT model served via FastAPI → BigQuery → Looker Studio. Infrastructure provisioned with Terraform.",
+    tech: ["BERT", "Transformers", "FastAPI", "Pub/Sub", "Dataflow", "BigQuery", "Airflow", "Terraform"],
+    image: "/images/nlp_sentiment.png",
+    github: "https://github.com/mohammedjunaidkhan980/nlp_sentiment_pipeline",
+    live: "https://github.com/mohammedjunaidkhan980/nlp_sentiment_pipeline",
+    color: "#6366f1",
+  },
+  {
+    id: 7,
+    title: "Real-Time Fraud Detection Pipeline",
+    description: "Real-time fraud detection using TensorFlow deep learning model. Transactions stream via Pub/Sub → Dataflow → FastAPI scoring → BigQuery alerts. Airflow DAG runs every 15 mins.",
+    tech: ["TensorFlow", "FastAPI", "Pub/Sub", "Dataflow", "BigQuery", "Airflow", "Terraform"],
+    image: "/images/fraud_detection.png",
+    github: "https://github.com/mohammedjunaidkhan980/fraud_detection_pipeline",
+    live: "https://github.com/mohammedjunaidkhan980/fraud_detection_pipeline",
+    color: "#F2388F",
+  },
+  {
     id: 1,
     title: "Flight Delay Analytics Pipeline",
     description: "Real-time + batch ELT pipeline on GCP. Pub/Sub → Dataflow → GCS → PySpark → BigQuery → Looker Studio.",
@@ -69,7 +89,13 @@ export const skills = [
   { name: "Redis", color: "#F2388F" },
   { name: "PostgreSQL", color: "#2F73FF" },
   { name: "MongoDB", color: "#76E36A" },
-  { name: "Docker", color: "#2F73FF" },
+  { name: "TensorFlow", color: "#FF6F00" },
+  { name: "PyTorch", color: "#EE4C2C" },
+  { name: "BERT", color: "#6366f1" },
+  { name: "NLP", color: "#6366f1" },
+  { name: "Deep Learning", color: "#F2388F" },
+  { name: "FastAPI", color: "#76E36A" },
+  { name: "Terraform", color: "#7B42BC" },
 ];
 
 export const timeline = [
