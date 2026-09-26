@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FloatingShape from './components/FloatingShape';
 import SectionTitle from './components/SectionTitle';
-import ProjectCard from './components/ProjectCard';
+import ProjectsCarousel from './components/ProjectsCarousel';
 import SkillTile from './components/SkillTile';
 import InfoCard from './components/InfoCard';
 import TimelineItem from './components/TimelineItem';
@@ -84,12 +84,8 @@ export default function App() {
         <div className="fade-up">
           <SectionTitle title="SELECTED WORK" subtitle="// PROJECTS" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, i) => (
-            <div key={project.id} className="fade-up">
-              <ProjectCard project={project} index={i} />
-            </div>
-          ))}
+        <div className="fade-up">
+          <ProjectsCarousel projects={projects} />
         </div>
       </section>
 
