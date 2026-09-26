@@ -15,7 +15,7 @@ import TimelineItem from './components/TimelineItem';
 import ContactButton from './components/ContactButton';
 import Footer from './components/Footer';
 
-import { projects, skills, timeline } from './data';
+import { projects, projectSections, skills, timeline } from './data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +85,7 @@ export default function App() {
           <SectionTitle title="SELECTED WORK" subtitle="// PROJECTS" />
         </div>
         <div className="fade-up">
-          <ProjectsCarousel projects={projects} />
+          <ProjectsCarousel projectSections={projectSections} />
         </div>
       </section>
 
