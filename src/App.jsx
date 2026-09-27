@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiGithub, FiLinkedin, FiMail, FiFileText } from 'react-icons/fi';
+import { SiLeetcode } from 'react-icons/si';
 import Lenis from 'lenis';
 
 import Navbar from './components/Navbar';
@@ -57,6 +58,7 @@ export default function App() {
     { label: 'STACK', value: 'Java Full Stack', color: '#76E36A' },
     { label: 'FOCUS', value: 'GCP Data Eng', color: '#F2388F' },
     { label: 'CERT', value: 'GCP Associate', color: '#EFCF35' },
+    { label: 'LEETCODE', value: '350+ Problems', color: '#FFA116' },
     { label: 'LOCATION', value: 'Bengaluru', color: '#F8F8F5' },
   ];
 
@@ -228,6 +230,13 @@ export default function App() {
             icon={<FiLinkedin />}
             bg="#2F73FF"
             color="#F8F8F5"
+          />
+          <ContactButton
+            href="https://leetcode.com/u/junaid_2318/"
+            label="LEETCODE 350+"
+            icon={<SiLeetcode />}
+            bg="#FFA116"
+            color="#111111"
           />
           <ContactButton
             href="#"

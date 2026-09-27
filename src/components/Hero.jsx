@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { SiLeetcode } from 'react-icons/si';
 import FloatingShape from './FloatingShape';
 
 export default function Hero() {
@@ -90,6 +91,14 @@ export default function Hero() {
           className="flex items-center gap-2 font-mono text-xs border-brutal px-3 py-2 bg-[#111111] text-[#F8F8F5] shadow-brutal hover:-translate-y-1 transition-all duration-200"
         >
           <FiGithub size={14} /> GitHub
+        </a>
+        <a
+          href="https://leetcode.com/u/junaid_2318/"
+          target="_blank" rel="noreferrer"
+          className="flex items-center gap-2 font-mono text-xs border-brutal px-3 py-2 shadow-brutal hover:-translate-y-1 transition-all duration-200"
+          style={{ background: '#FFA116' }}
+        >
+          <SiLeetcode size={14} /> 350+ LeetCode
         </a>
       </div>
 

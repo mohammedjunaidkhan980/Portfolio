@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { SiLeetcode } from 'react-icons/si';
 
 export default function Navbar() {
   const navRef = useRef(null);
@@ -57,6 +58,10 @@ export default function Navbar() {
             <a href="https://github.com/mohammedjunaidkhan980" target="_blank" rel="noreferrer" title="GitHub"
               className="hover:scale-110 transition-transform duration-200">
               <FiGithub size={16} />
+            </a>
+            <a href="https://leetcode.com/u/junaid_2318/" target="_blank" rel="noreferrer" title="LeetCode"
+              className="hover:scale-110 transition-transform duration-200 hover:text-[#FFA116]">
+              <SiLeetcode size={16} />
             </a>
           </div>
         </div>
