@@ -27,7 +27,10 @@ export default function Navbar() {
     <nav ref={navRef} className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
       <div className="bg-[#F8F8F5] border-brutal-thick shadow-brutal rounded-full px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <span className="font-anton text-xl tracking-wider">MJK</span>
+        <span className="font-anton text-xl tracking-wider flex items-center gap-2">
+          MJK
+          <span className="w-2 h-2 rounded-full bg-[#76E36A] border border-[#111111] animate-pulse" title="Open to Work" />
+        </span>
 
         {/* Links */}
         <ul className="hidden md:flex gap-6 font-grotesk font-semibold text-sm">

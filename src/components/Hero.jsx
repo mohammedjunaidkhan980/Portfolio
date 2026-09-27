@@ -1,15 +1,26 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { SiLeetcode } from 'react-icons/si';
 import FloatingShape from './FloatingShape';
 
+function getExperience() {
+  const start = new Date('2025-07-01');
+  const now   = new Date();
+  const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+  const yrs = Math.floor(months / 12);
+  const mos = months % 12;
+  if (yrs === 0) return `${mos} Month${mos !== 1 ? 's' : ''}`;
+  if (mos === 0) return `${yrs} Year${yrs !== 1 ? 's' : ''}`;
+  return `${yrs}Y ${mos}M`;
+}
+
 export default function Hero() {
-  const line1Ref = useRef(null);
-  const line2Ref = useRef(null);
+  const line1Ref    = useRef(null);
+  const line2Ref    = useRef(null);
   const subtitleRef = useRef(null);
-  const badgeRef = useRef(null);
-  const btnRef = useRef(null);
+  const btnRef      = useRef(null);
+  const exp         = getExperience();
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.8 });
@@ -24,10 +35,6 @@ export default function Hero() {
     .fromTo(subtitleRef.current,
       { y: 40, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' }, '-=0.3'
-    )
-    .fromTo(badgeRef.current,
-      { scale: 0, rotation: -10 },
-      { scale: 1, rotation: 0, duration: 0.6, ease: 'back.out(2)' }, '-=0.3'
     )
     .fromTo(btnRef.current,
       { scale: 0, rotation: 20 },
@@ -68,6 +75,24 @@ export default function Hero() {
         >
           JUNAID
         </h1>
+      </div>
+
+      {/* Open to work + experience badge */}
+      <div className="flex flex-wrap items-center gap-3 mt-2 mb-4">
+        <span className="flex items-center gap-2 font-mono text-xs bg-[#76E36A] border-brutal px-4 py-2 animate-pulse">
+          <span className="w-2 h-2 rounded-full bg-[#111111] inline-block"/> OPEN TO WORK
+        </span>
+        <span className="font-mono text-xs bg-[#F8F8F5] border-brutal px-4 py-2">
+          📅 Jul 2025 – Now · <strong>{exp}</strong> Experience
+        </span>
+      </div>
+
+      {/* Looking for roles */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        <span className="font-mono text-xs border-brutal px-3 py-1 bg-[#2F73FF] text-[#F8F8F5]">GCP Data Engineer</span>
+        <span className="font-mono text-xs border-brutal px-3 py-1 bg-[#F2388F] text-[#F8F8F5]">ML Engineer</span>
+        <span className="font-mono text-xs border-brutal px-3 py-1 bg-[#111111] text-[#F8F8F5]">AI Engineer</span>
+        <span className="font-mono text-xs border-brutal px-3 py-1 bg-[#EFCF35] text-[#111111]">Data Engineer</span>
       </div>
 
       {/* Social links below name */}

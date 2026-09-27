@@ -52,8 +52,19 @@ export default function App() {
     });
   }, []);
 
+  function getExperience() {
+    const start  = new Date('2025-07-01');
+    const now    = new Date();
+    const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+    const yrs    = Math.floor(months / 12);
+    const mos    = months % 12;
+    if (yrs === 0) return `${mos} Month${mos !== 1 ? 's' : ''}`;
+    if (mos === 0) return `${yrs} Year${yrs !== 1 ? 's' : ''}`;
+    return `${yrs}Y ${mos}M`;
+  }
+
   const aboutCards = [
-    { label: 'EXPERIENCE', value: 'Jul 2025 – Present', color: '#2F73FF' },
+    { label: 'EXPERIENCE', value: `Jul 2025 – ${getExperience()}`, color: '#2F73FF' },
     { label: 'ROLE', value: 'Software Engineer', color: '#F8F8F5' },
     { label: 'STACK', value: 'Java Full Stack', color: '#76E36A' },
     { label: 'FOCUS', value: 'GCP Data Eng', color: '#F2388F' },
@@ -202,11 +213,21 @@ export default function App() {
             LET'S BUILD
           </h2>
           <h2
-            className="font-anton text-[clamp(40px,7vw,90px)] leading-none mb-10 text-[#F2388F]"
+            className="font-anton text-[clamp(40px,7vw,90px)] leading-none mb-6 text-[#F2388F]"
             style={{ WebkitTextStroke: '2px #111111', textShadow: '6px 6px 0px #111111' }}
           >
             SOMETHING COOL.
           </h2>
+
+          {/* Open to work */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            <span className="flex items-center gap-2 font-mono text-xs bg-[#76E36A] border-brutal px-4 py-2 animate-pulse">
+              <span className="w-2 h-2 rounded-full bg-[#111111] inline-block"/> OPEN TO WORK
+            </span>
+            <span className="font-mono text-xs bg-[#F8F8F5] border-brutal px-4 py-2">
+              Looking for → GCP Data Engineer · ML Engineer · AI Engineer · Data Engineer
+            </span>
+          </div>
         </div>
 
         <div className="fade-up flex flex-wrap justify-center gap-4">
