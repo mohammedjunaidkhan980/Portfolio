@@ -43,7 +43,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 md:px-16 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col md:flex-row justify-center items-center pt-28 pb-16 px-6 md:px-16 overflow-hidden gap-12">
 
       {/* Floating decorations */}
       <FloatingShape type="star" color="#F2388F" style={{ top: '12%', right: '8%' }} />
@@ -51,6 +51,9 @@ export default function Hero() {
       <FloatingShape type="square" color="#76E36A" style={{ bottom: '30%', left: '5%' }} />
       <FloatingShape type="scribble" color="#111111" style={{ bottom: '20%', right: '10%' }} />
       <FloatingShape type="star" color="#2F73FF" style={{ top: '60%', left: '15%' }} />
+
+      {/* Left column */}
+      <div className="flex-1">
 
       {/* Hero text */}
       <div className="overflow-hidden mb-4">
@@ -157,6 +160,45 @@ export default function Hero() {
           onMouseLeave={e => e.currentTarget.style.transform = 'rotate(12deg)'}
         >
           HIRE ME ✦
+        </a>
+      </div>
+
+      </div>{/* end left column */}
+
+      {/* Right column — Featured Projects */}
+      <div className="hidden md:flex flex-col gap-4 w-[340px] shrink-0">
+        <span className="font-mono text-xs bg-[#111111] text-[#F8F8F5] px-3 py-1 self-start tracking-widest">// FEATURED</span>
+
+        {/* Card 1 — Multi-Agent */}
+        <a
+          href="https://github.com/mohammedjunaidkhan980/MULTI_AGENT"
+          target="_blank" rel="noreferrer"
+          className="border-brutal shadow-brutal bg-[#F8F8F5] p-4 hover:-translate-y-1 transition-all duration-200 block"
+        >
+          <div className="w-full h-36 border-brutal overflow-hidden mb-3">
+            <img src="/images/MULTI_AGENT.png" alt="Multi-Agent" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex items-start justify-between gap-2 mb-2">
+            <span className="font-grotesk font-bold text-sm leading-tight">Multi-Agent Career Platform</span>
+            <span className="font-mono text-[10px] bg-[#76E36A] border-brutal px-2 py-0.5 shrink-0">Java · AI</span>
+          </div>
+          <p className="font-mono text-[11px] text-[#555] leading-relaxed">4 AI agents — Skill Gap, Mock Interview, Salary Advisor — with LLM master router.</p>
+        </a>
+
+        {/* Card 2 — Nexora */}
+        <a
+          href="https://github.com/mohammedjunaidkhan980/Nexora_Implementation_studio"
+          target="_blank" rel="noreferrer"
+          className="border-brutal shadow-brutal bg-[#F8F8F5] p-4 hover:-translate-y-1 transition-all duration-200 block"
+        >
+          <div className="w-full h-36 border-brutal overflow-hidden mb-3">
+            <img src="/images/Nexora_Implementation.png" alt="Nexora" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex items-start justify-between gap-2 mb-2">
+            <span className="font-grotesk font-bold text-sm leading-tight">Nexora Implementation Studio</span>
+            <span className="font-mono text-[10px] bg-[#F2388F] text-[#F8F8F5] border-brutal px-2 py-0.5 shrink-0">Python · AI</span>
+          </div>
+          <p className="font-mono text-[11px] text-[#555] leading-relaxed">Org-scoped AI workspace with RAG, agent config, document chat & leave management.</p>
         </a>
       </div>
 
