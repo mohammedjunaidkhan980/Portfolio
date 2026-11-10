@@ -166,7 +166,7 @@ export default function Hero() {
       </div>{/* end left column */}
 
       {/* Right column — Featured Projects */}
-      <div className="hidden md:flex flex-col gap-4 w-[340px] shrink-0">
+      <div className="hidden md:flex flex-col gap-4 w-[420px] shrink-0">
         <span className="font-mono text-xs bg-[#111111] text-[#F8F8F5] px-3 py-1 self-start tracking-widest">// FEATURED</span>
 
         {/* Card 1 — Multi-Agent */}
@@ -175,7 +175,7 @@ export default function Hero() {
           target="_blank" rel="noreferrer"
           className="border-brutal shadow-brutal bg-[#F8F8F5] p-4 hover:-translate-y-1 transition-all duration-200 block"
         >
-          <div className="w-full h-36 border-brutal overflow-hidden mb-3">
+          <div className="w-full h-52 border-brutal overflow-hidden mb-3">
             <img src="/images/MULTI_AGENT.png" alt="Multi-Agent" className="w-full h-full object-cover" />
           </div>
           <div className="flex items-start justify-between gap-2 mb-2">
@@ -191,7 +191,7 @@ export default function Hero() {
           target="_blank" rel="noreferrer"
           className="border-brutal shadow-brutal bg-[#F8F8F5] p-4 hover:-translate-y-1 transition-all duration-200 block"
         >
-          <div className="w-full h-36 border-brutal overflow-hidden mb-3">
+          <div className="w-full h-52 border-brutal overflow-hidden mb-3">
             <img src="/images/Nexora_Implementation.png" alt="Nexora" className="w-full h-full object-cover" />
           </div>
           <div className="flex items-start justify-between gap-2 mb-2">
