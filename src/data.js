@@ -34,6 +34,16 @@ export const projectSections = [
     color: "#F2388F",
     projects: [
       {
+        id: 8,
+        title: "Nexora Implementation Studio",
+        description: "Organization-scoped AI workspace. Teams manage employees, configure AI agents, chat with documents via RAG, and handle leave requests through chat.",
+        tech: ["Python", "FastAPI", "ChromaDB", "MongoDB", "React", "SQLAlchemy"],
+        image: "/images/Nexora_Implementation.png",
+        github: "https://github.com/mohammedjunaidkhan980/Nexora_Implementation_studio",
+        live: "https://github.com/mohammedjunaidkhan980/Nexora_Implementation_studio",
+        color: "#F2388F",
+      },
+      {
         id: 4,
         title: "RAG HR Assistant",
         description: "AI-powered HR document Q&A system. PDF chunking, vector embeddings, cosine similarity search, Azure OpenAI.",
